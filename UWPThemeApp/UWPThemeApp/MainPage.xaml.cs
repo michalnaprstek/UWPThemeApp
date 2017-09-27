@@ -26,5 +26,12 @@ namespace UWPThemeApp
         {
             this.InitializeComponent();
         }
+
+        private void ToggleSwitch_OnToggled(object sender, RoutedEventArgs e)
+        {
+            RequestedTheme = Toggle.IsOn
+                ? ElementTheme.Dark
+                : ElementTheme.Light;
+        }
     }
 }
